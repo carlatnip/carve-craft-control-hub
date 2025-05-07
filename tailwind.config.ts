@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				cnc: {
+					'dark': '#1A1F2C',
+					'primary': '#8B5CF6',
+					'secondary': '#7E69AB',
+					'light': '#E5DEFF',
+					'accent': '#D946EF',
+					'danger': '#F97316',
+					'success': '#10B981'
 				}
 			},
 			borderRadius: {
@@ -89,6 +99,9 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			fontFamily: {
+				mono: ['JetBrains Mono', 'monospace']
 			}
 		}
 	},
