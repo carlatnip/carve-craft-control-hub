@@ -10,6 +10,7 @@ import GCodeEditor from "@/components/GCodeEditor";
 import ConsoleOutput from "@/components/ConsoleOutput";
 
 const Index = () => {
+  console.log("Index page rendering");
   return (
     <ConnectionProvider>
       <MachineProvider>
