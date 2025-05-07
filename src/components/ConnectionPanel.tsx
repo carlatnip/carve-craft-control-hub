@@ -5,7 +5,7 @@ import { useMachine } from "@/contexts/MachineContext";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReloadIcon, PowerIcon, PowerOffIcon } from "lucide-react";
+import { RefreshCw, Power, PowerOff } from "lucide-react";
 
 const ConnectionPanel = () => {
   const { 
@@ -69,7 +69,7 @@ const ConnectionPanel = () => {
               onClick={refreshPorts}
               disabled={isLoadingPorts || status.connected || isConnecting}
             >
-              <ReloadIcon className={`h-4 w-4 ${isLoadingPorts ? 'animate-spin' : ''}`} />
+              <RefreshCw className={`h-4 w-4 ${isLoadingPorts ? 'animate-spin' : ''}`} />
               <span className="sr-only">Refresh Ports</span>
             </Button>
           </div>
@@ -117,12 +117,12 @@ const ConnectionPanel = () => {
           >
             {isDisconnecting ? (
               <>
-                <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+                <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
                 Disconnecting...
               </>
             ) : (
               <>
-                <PowerOffIcon className="mr-2 h-4 w-4" />
+                <PowerOff className="mr-2 h-4 w-4" />
                 Disconnect
               </>
             )}
@@ -135,12 +135,12 @@ const ConnectionPanel = () => {
           >
             {isConnecting ? (
               <>
-                <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+                <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
                 Connecting...
               </>
             ) : (
               <>
-                <PowerIcon className="mr-2 h-4 w-4" />
+                <Power className="mr-2 h-4 w-4" />
                 Connect
               </>
             )}
